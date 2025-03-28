@@ -19,7 +19,7 @@ namespace Jack_Black.classes
 
     public enum FaceValue
     {
-        ACE,
+        ACE=1,
         TWO,
         THREE,
         FOUR,
@@ -40,7 +40,7 @@ namespace Jack_Black.classes
         Suits suit;
         FaceValue faceValue;
         int value;
-        Image img;
+        //Image img;
 
         public Suits Suit 
         {
