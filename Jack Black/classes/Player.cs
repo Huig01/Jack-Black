@@ -14,6 +14,11 @@ namespace Jack_Black.classes
         public void Hit(Card card)
         {
             hand.addCard(card);            
-        }       
+        }
+        
+        public void Stand()
+        {
+            hand.Stand();
+        }
     }
 }
