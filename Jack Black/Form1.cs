@@ -6,6 +6,7 @@ namespace Jack_Black
     {
         Deck deck = new Deck();
         Player player1 = new Player();
+        int punten = 0;
         Card twoOfHearts = new Card(Suits.HEARTS, FaceValue.TWO);
         public Form1()
         {
@@ -26,13 +27,15 @@ namespace Jack_Black
         private void button1_Click(object sender, EventArgs e)
         {
 
-            Deck deck = new Deck();
+           
             deck.Shuffle();
             System.Diagnostics.Debug.WriteLine(deck.DrawCard().ToString());
             //Card drawdCard = deck.DrawCard();
             //Console.WriteLine(drawdCard.ToString());
 
         }
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {
