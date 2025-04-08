@@ -8,8 +8,8 @@
 
         public Hand()
         {
-            cards.Add(new Card(Suits.DIAMONDS, FaceValue.EIGHT));
-            cards.Add(new Card(Suits.CLUBS, FaceValue.SEVEN));
+            cards.Add(new Card(Suits.DIAMONDS, FaceValue.KING));
+            cards.Add(new Card(Suits.CLUBS, FaceValue.KING));
         }
         //om te testen later verwijderen.
                         
@@ -17,7 +17,7 @@
 
         public void addCard(Card card)
         {
-            if(isBust || hasStand || cards.Count < 2)
+            if(isBust || hasStand || this.cards.Count < 2)
             {
                 return;
             }
@@ -48,6 +48,15 @@
             //hier onderbreek een funtie
         }
 
+        public void Stand()
+        {
+            if(isBust || hasStand || this.cards.Count < 2)
+            {
+                return;
+            }
+
+            hasStand = true;
+        }
         
 
     }
