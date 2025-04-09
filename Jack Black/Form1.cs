@@ -11,10 +11,6 @@ namespace Jack_Black
         public Form1()
         {
             InitializeComponent();
-
-
-            
-
             Deck deck = new Deck();
             deck.Shuffle();
             System.Diagnostics.Debug.WriteLine(deck.DrawCard().ToString());
