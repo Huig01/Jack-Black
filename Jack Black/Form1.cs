@@ -33,12 +33,17 @@ namespace Jack_Black
 
         private void button2_Click(object sender, EventArgs e)
         {
-            List<Card> card = new List<Card>();
 
-            dealerHand.addCard(card);
-            dealerHand.addCard(card);
-            
+            //De game start eerst jezelf een kaart dan klokwaard,
+            //de Speler dan klokwaard naar jezelf,
+            //en daarna pas naar Speler en eindigt met 2 kaarten
 
+            // voor dealer
+            dealerHand.AddCard(dealerDeck.DrawCard());
+            dealerHand.AddCard(dealerDeck.DrawCard());
+            // voor speler
+            player1.Addcard(dealerDeck.DrawCard());
+            player1.Addcard(dealerDeck.DrawCard());
 
         }
 
@@ -55,11 +60,10 @@ namespace Jack_Black
 
             Card card = new Card(Suits.HEARTS, FaceValue.TWO);
 
-            // voor speler
+            
             player1.Hit(card);
-
-            // voor dealer
-            dealerHand.addCard(card);
+            
+            
 
 
             // System.Diagnostics.Debug.WriteLine(player1.Hit(card).ToString());

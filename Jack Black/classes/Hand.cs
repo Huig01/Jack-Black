@@ -13,9 +13,19 @@
         }
         //om te testen later verwijderen.
                         
+        public void AddCard(Card card)
+        {
+            if(this.cards.Count != 0)
+            {
+                return;
+            }
+
+            cards.Add(card);
 
 
-        public void addCard(Card card)
+        }
+
+        public void hit(Card card)
         {
             if(isBust || hasStand || this.cards.Count < 2)
             {
