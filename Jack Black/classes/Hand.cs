@@ -6,16 +6,16 @@
         bool hasStand;
         List<Card> cards = new List<Card>();
 
-        public Hand()
-        {
-            cards.Add(new Card(Suits.DIAMONDS, FaceValue.KING));
-            cards.Add(new Card(Suits.CLUBS, FaceValue.KING));
-        }
+        //public Hand()
+        //{
+        //    cards.Add(new Card(Suits.DIAMONDS, FaceValue.KING));
+       //     cards.Add(new Card(Suits.CLUBS, FaceValue.KING));
+       // }
         //om te testen later verwijderen.
                         
         public void AddCard(Card card)
         {
-            if(this.cards.Count != 0)
+            if(this.cards.Count >= 2)
             {
                 return;
             }

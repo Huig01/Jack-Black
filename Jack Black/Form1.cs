@@ -38,12 +38,11 @@ namespace Jack_Black
             //de Speler dan klokwaard naar jezelf,
             //en daarna pas naar Speler en eindigt met 2 kaarten
 
-            // voor dealer
-            dealerHand.AddCard(dealerDeck.DrawCard());
-            dealerHand.AddCard(dealerDeck.DrawCard());
-            // voor speler
+            
             player1.Addcard(dealerDeck.DrawCard());
+            dealerHand.AddCard(dealerDeck.DrawCard());                     
             player1.Addcard(dealerDeck.DrawCard());
+            dealerHand.AddCard(dealerDeck.DrawCard());
 
         }
 

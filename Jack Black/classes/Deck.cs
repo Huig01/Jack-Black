@@ -15,7 +15,7 @@ namespace Jack_Black.classes
         {
             for (int i = 0; i < 4; i++)
             {
-                for (int j = 0; j < 13; j++)
+                for (int j = 1; j <= 13; j++)
                 {
                     deck.Add(new Card((Suits)i, (FaceValue)j));
                     //shoe.AddRange(new Deck().deck);
