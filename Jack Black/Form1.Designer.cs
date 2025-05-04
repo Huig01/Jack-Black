@@ -36,7 +36,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(403, 43);
+            button1.Location = new Point(650, 330);
             button1.Name = "button1";
             button1.Size = new Size(104, 88);
             button1.TabIndex = 0;
@@ -46,17 +46,17 @@
             // 
             // button2
             // 
-            button2.Location = new Point(424, 234);
+            button2.Location = new Point(12, 43);
             button2.Name = "button2";
-            button2.Size = new Size(112, 34);
+            button2.Size = new Size(104, 88);
             button2.TabIndex = 1;
-            button2.Text = "button2";
+            button2.Text = "Start Game";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
             // button3
             // 
-            button3.Location = new Point(269, 43);
+            button3.Location = new Point(650, 190);
             button3.Name = "button3";
             button3.Size = new Size(104, 88);
             button3.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(131, 43);
+            button4.Location = new Point(650, 52);
             button4.Name = "button4";
             button4.Size = new Size(104, 88);
             button4.TabIndex = 3;

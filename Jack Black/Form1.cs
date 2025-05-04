@@ -4,17 +4,15 @@ namespace Jack_Black
 {
     public partial class Form1 : Form
     {
-        Deck deck = new Deck();
+        Deck dealerDeck = new Deck();
+        Hand dealerHand = new Hand(); 
         Player player1 = new Player();
+
         int punten = 0;
         Card twoOfHearts = new Card(Suits.HEARTS, FaceValue.TWO);
         public Form1()
         {
             InitializeComponent();
-
-
-            
-
             Deck deck = new Deck();
             deck.Shuffle();
             System.Diagnostics.Debug.WriteLine(deck.DrawCard().ToString());
@@ -25,20 +23,26 @@ namespace Jack_Black
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-
-           
-            deck.Shuffle();
-            System.Diagnostics.Debug.WriteLine(deck.DrawCard().ToString());
-            //Card drawdCard = deck.DrawCard();
-            //Console.WriteLine(drawdCard.ToString());
-
+        {           
+            dealerDeck.Shuffle();
+            System.Diagnostics.Debug.WriteLine(dealerDeck.DrawCard().ToString());
+            
         }
 
 
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            //De game start eerst jezelf een kaart dan klokwaard,
+            //de Speler dan klokwaard naar jezelf,
+            //en daarna pas naar Speler en eindigt met 2 kaarten
+
+            
+            player1.Addcard(dealerDeck.DrawCard());
+            dealerHand.AddCard(dealerDeck.DrawCard());                     
+            player1.Addcard(dealerDeck.DrawCard());
+            dealerHand.AddCard(dealerDeck.DrawCard());
 
         }
 
@@ -55,7 +59,10 @@ namespace Jack_Black
 
             Card card = new Card(Suits.HEARTS, FaceValue.TWO);
 
-            player1.Hit(card);         
+            
+            player1.Hit(card);
+            
+            
 
 
             // System.Diagnostics.Debug.WriteLine(player1.Hit(card).ToString());
